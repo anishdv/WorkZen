@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ToDo from "./components/ToDo";
+import Pomodoro from "./components/Pomodoro";
+import LoFiMusic from "./components/LoFiMusic";
+import MotivationalQuote from "./components/MotivationQuotes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 bg-slate-700 min-h-screen min-w-screen">
+      <div className=" bg-gray-900 row-span-2 min-w-2 p-4 rounded-2xl">
+        {/* <h2 className="text-2xl mb-4 text-white">ToDo</h2> */}
+        <ToDo />
+      </div>
+      <div className=" bg-gray-900 row-span-2 min-w-md p-4 rounded-2xl">
+        {/* <h2 className="text-2xl mb-4 text-white">Pomodoro</h2> */}
+        <Pomodoro />
+      </div>
+      <div className=" bg-gray-900 row-span-2 min-w-md p-4 rounded-2xl">
+        {/* <h2 className="text-2xl mb-4 text-white">Lo-Fi Music</h2> */}
+        <LoFiMusic />
+      </div>
+      <div className="col-span-3  bg-gray-900 place-content-center rounded-2xl">
+        <MotivationalQuote />
+      </div>
     </div>
   );
 }
